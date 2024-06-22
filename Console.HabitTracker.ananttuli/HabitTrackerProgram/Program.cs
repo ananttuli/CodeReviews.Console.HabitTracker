@@ -40,10 +40,12 @@
 
                     break;
                 case "3":
+                    Model.HabitLog.ViewHabitLogs();
                     Model.HabitLog.UpdateHabitLog();
 
                     break;
                 case "4":
+                    Model.HabitLog.ViewHabitLogs();
                     Model.HabitLog.DeleteHabitLog();
 
                     break;

@@ -21,7 +21,7 @@ namespace HabitTrackerProgram.Model
 
             decimal quantity = Util.Input.TryReadInput("Quantity (Numerical values only)", Util.Input.ParseDecimal);
 
-            DateTime logDateTime = Util.Input.TryReadInput("Date (E.g. 2024-01-01)", Util.Input.ParseDateTime);
+            DateTime logDateTime = Util.Input.TryReadInput("Date (yyyy-mm-dd E.g. 2024-12-31)", Util.Input.ParseDateTime);
 
             HabitLogRepo.CreateHabit(quantity, logDateTime);
         }
@@ -46,7 +46,7 @@ namespace HabitTrackerProgram.Model
 
             foreach (HabitLog habit in habits)
             {
-                Console.WriteLine($"\t\t{habit.id}\t\t{habit.quantity}\t\t{habit.logTime}");
+                Console.WriteLine($"\t\t{habit.id}\t\t{habit.quantity}\t\t{habit.logTime.ToShortDateString()}");
             }
         }
 
